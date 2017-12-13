@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tunein.dfpaudiosample.videoplayer.VideoAdPlayerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/videoPlayerWithAdPlayback"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_centerInParent="true"
+    >
+
+    <!--Video player that will show video ad unit-->
+    <com.tunein.dfpaudiosample.videoplayer.VideoPlayerView
+        android:id="@+id/videoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <!--Ad Ui Container that display "Learn more and time left-->
+    <FrameLayout
+        android:id="@+id/adUiContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="10:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</com.tunein.dfpaudiosample.videoplayer.VideoAdPlayerView>

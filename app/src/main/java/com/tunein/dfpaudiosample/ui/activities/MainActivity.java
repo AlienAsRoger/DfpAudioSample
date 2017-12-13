@@ -1,7 +1,9 @@
-package com.tunein.dfpaudiosample;
+package com.tunein.dfpaudiosample.ui.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.tunein.dfpaudiosample.R;
 
 public class MainActivity extends AppCompatActivity {
 
