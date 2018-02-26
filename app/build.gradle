@@ -42,6 +42,6 @@ dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
 
     // IMA SDK for Video Preroll
-    compile "com.google.ads.interactivemedia.v3:interactivemedia:3.7.4"
+    compile "com.google.ads.interactivemedia.v3:interactivemedia:3.8.2"
 
 }
