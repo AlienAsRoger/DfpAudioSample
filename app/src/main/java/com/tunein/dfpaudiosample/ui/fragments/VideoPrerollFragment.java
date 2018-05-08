@@ -34,6 +34,7 @@ public class VideoPrerollFragment extends BaseFragment implements VideoAdRespons
 
 //    private String mVideoPrerollAdUnitId = "/15480783/Mobile-Preroll-Video-Stage/Android-Preroll-Video-Stage";
     private String mVideoPrerollAdUnitId = "/124319096/external/single_ad_samples";
+    private View mCompanionAdView;
 //    private String mVideoPrerollAdUnitId = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/"
 //            + "single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast"
 //            + "&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct"
@@ -141,6 +142,11 @@ public class VideoPrerollFragment extends BaseFragment implements VideoAdRespons
     }
 
     @Override
+    public ViewGroup getCompanionAdView() {
+        return (ViewGroup) mCompanionAdView;
+    }
+
+    @Override
     public String getAdUnitId() {
         return mVideoPrerollAdUnitId;
     }
@@ -222,6 +228,7 @@ public class VideoPrerollFragment extends BaseFragment implements VideoAdRespons
 
     private void initWidgets(View view) {
         mContainerView = view.findViewById(R.id.video_container);
+        mCompanionAdView = view.findViewById(R.id.companion_ad_view);
         mStopButton = view.findViewById(R.id.stop_button);
         mPlayButton = view.findViewById(R.id.play_button);
         mLoadingProgressBar = view.findViewById(R.id.loading_progress_bar);

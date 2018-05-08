@@ -1,5 +1,7 @@
 package com.tunein.dfpaudiosample.interfaces;
 
+import android.view.ViewGroup;
+
 /**
  * Local in Ads SDK interface to listen when Ad provider (i.e. IMA SDK) finishes playing video ad.
  */
@@ -17,4 +19,5 @@ public interface IVideoAdListener {
 
     void resumeContent();
 
+    ViewGroup getCompanionAdView();
 }

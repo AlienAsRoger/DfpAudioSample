@@ -4,4 +4,5 @@
     <string name="play">play</string>
     <string name="pause">pause</string>
     <string name="minus_symbol_arg">- %s</string>
+    <string name="title_activity_main_web">MainWebActivity</string>
 </resources>

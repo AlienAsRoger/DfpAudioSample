@@ -1,6 +1,8 @@
 package com.tunein.dfpaudiosample.interfaces;
 
 
+import android.view.ViewGroup;
+
 /**
  * Extension for {@link AdResponseListener} for Video Ads. Should be used to communicate from client
  * side to Ads SDK and Ad provider for the ad itself.
@@ -17,4 +19,5 @@ public interface VideoAdResponseListener extends AdResponseListener {
 
     String getVideoSupportedSizes();
 
+    ViewGroup getCompanionAdView();
 }

@@ -36,12 +36,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     // Dagger 2
-    compile "com.google.dagger:dagger:2.11"
-    annotationProcessor "com.google.dagger:dagger-compiler:2.11"
-    testAnnotationProcessor "com.google.dagger:dagger-compiler:2.11"
+    compile "com.google.dagger:dagger:2.15"
+    annotationProcessor "com.google.dagger:dagger-compiler:2.15"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:2.15"
     provided 'javax.annotation:jsr250-api:1.0'
 
     // IMA SDK for Video Preroll
-    compile "com.google.ads.interactivemedia.v3:interactivemedia:3.8.2"
+    compile "com.google.ads.interactivemedia.v3:interactivemedia:3.8.5"
 
 }

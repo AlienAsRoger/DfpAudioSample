@@ -3,6 +3,7 @@
 package com.tunein.dfpaudiosample.videoplayer;
 
 import android.content.Context;
+import android.view.ViewGroup;
 
 import com.google.ads.interactivemedia.v3.api.AdDisplayContainer;
 import com.google.ads.interactivemedia.v3.api.AdErrorEvent;
@@ -11,11 +12,14 @@ import com.google.ads.interactivemedia.v3.api.AdsLoader;
 import com.google.ads.interactivemedia.v3.api.AdsManager;
 import com.google.ads.interactivemedia.v3.api.AdsManagerLoadedEvent;
 import com.google.ads.interactivemedia.v3.api.AdsRequest;
+import com.google.ads.interactivemedia.v3.api.CompanionAdSlot;
 import com.google.ads.interactivemedia.v3.api.ImaSdkFactory;
 import com.google.ads.interactivemedia.v3.api.ImaSdkSettings;
 import com.tunein.dfpaudiosample.interfaces.IVideoAdListener;
 import com.tunein.dfpaudiosample.interfaces.IVideoAdPlayerController;
 import com.tunein.dfpaudiosample.interfaces.IVideoAdPlayerView;
+
+import java.util.ArrayList;
 
 /**
  * Ads logic for handling the IMA SDK integration code and events.
@@ -206,6 +210,16 @@ public class VideoAdPlayerController implements IVideoAdPlayerController {
         mAdDisplayContainer = mSdkFactory.createAdDisplayContainer();
         mAdDisplayContainer.setPlayer(mVideoPlayerWithAdPlayback.getVideoAdPlayer());
         mAdDisplayContainer.setAdContainer(mVideoPlayerWithAdPlayback.getAdUiContainer());
+
+        ViewGroup companionAdView = mVideoAdListener.getCompanionAdView();
+        // Set up spots for companions.
+        CompanionAdSlot companionAdSlot = mSdkFactory.createCompanionAdSlot();
+        companionAdSlot.setContainer(companionAdView);
+        companionAdSlot.setSize(300, 250);
+
+        ArrayList<CompanionAdSlot> companionAdSlots = new ArrayList<>();
+        companionAdSlots.add(companionAdSlot);
+        mAdDisplayContainer.setCompanionSlots(companionAdSlots);
 
         // Create the ads request.
         AdsRequest request = mSdkFactory.createAdsRequest();
